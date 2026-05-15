@@ -47,7 +47,7 @@ Built with a **Python FastAPI** backend and a **vanilla JavaScript + Firebase** 
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/personal-finance-tracker.git
+git clone https://github.com/rawda0/personal-finance-tracker.git
 cd personal-finance-tracker
 ```
 

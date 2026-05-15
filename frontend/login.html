@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <form class="login-form" id="loginForm">
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="login-button" id="loginButton">Login</button>
+                </div>
+
+                <div class="register">
+                    <a href="#" id="registerLink">Register?</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <div class="title">Personal<br>Finance Tracker</div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/login.js"></script>
+</body>
+
+</html>

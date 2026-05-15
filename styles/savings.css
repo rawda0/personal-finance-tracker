@@ -1,0 +1,310 @@
+/* Global and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8e7ed;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== SHARED FORM COMPONENTS ===== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2d3748;
+    font-size: 0.8rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #f7fafc;
+    font-size: 0.85rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #787bb6;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* ===== NAVBAR (Required for the Header) ===== */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* User Section in Navbar */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-name {
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.logout-btn {
+    background-color: #787bb6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #5f62a0;
+}
+
+.nav-link {
+    color: #4a5568;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2d3748;
+}
+
+.nav-link.active {
+    color: #2d3748;
+    border-bottom-color: #787bb6;
+    /* Highlights the active page */
+}
+
+/* ===== SAVINGS PAGE CONTENT ===== */
+.savings-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Card for the Goal Setting Form */
+.goal-form-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    grid-column: 1;
+}
+
+.goal-form-card h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    align-items: center;
+    text-align: center;
+}
+
+/* Goal Button specific color */
+.goal-btn {
+    background-color: #000000;
+    /* Purple/Indigo */
+    color: white;
+}
+
+.goal-btn:hover {
+    background-color: #606060;
+}
+
+/* Container for displaying all savings goals */
+.savings-goals {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.savings-goals h2 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+/* Grid layout for goal items */
+.goals-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.goal-item {
+    background-color: #f7fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.goal-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.goal-item h3 {
+    color: #2d3748;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+.goal-actions {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: space-between;
+}
+
+.action-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.add-btn {
+    background-color: #529e61;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #38a169;
+}
+
+.remove-btn {
+    background-color: #dc4242;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #e53e3e;
+}
+
+.edit-btn {
+    background-color: #d5d5d5;
+    color: #718096;
+}
+
+.edit-btn:hover {
+    background-color: #e8e8e8;
+}
+
+.delete-btn {
+    background-color: #dc4242;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c53030;
+}
+
+/* Progress Bar setup */
+.goal-progress {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.goal-progress-bar {
+    height: 100%;
+    background-color: #787bb6;
+    transition: width 0.3s;
+}
+
+/* Stats for saved amount and target */
+.goal-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #718096;
+}
+
+.goal-stats .saved {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Responsive Design (Savings) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .goals-list {
+        grid-template-columns: 1fr;
+        /* Stack goals vertically */
+    }
+}
